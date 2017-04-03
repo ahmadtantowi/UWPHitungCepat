@@ -1,0 +1,73 @@
+﻿<Page
+    x:Class="UWPHitungCepat.View.ResultPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UWPHitungCepat.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock HorizontalAlignment="Center" FontSize="30" Text="Permainan selesai!"/>
+            <TextBlock HorizontalAlignment="Center" FontSize="50" Text="Skor Anda:"/>
+            <TextBlock x:Name="labelScore" HorizontalAlignment="Center" FontSize="100" Text="100"/>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,70,0,0">
+                <Button x:Name="btnHome"
+                    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+                    Height="60" 
+                    Width="75"
+                    HorizontalAlignment="Center" 
+                    Click="btnHome_Click">
+                    <StackPanel>
+                        <SymbolIcon Symbol="Home" Margin="0,5,0,0" RenderTransformOrigin="0.5,0.5">
+                            <SymbolIcon.RenderTransform>
+                                <CompositeTransform ScaleX="1.3" ScaleY="1.3"/>
+                            </SymbolIcon.RenderTransform>
+                        </SymbolIcon>
+                        <TextBlock Text="Beranda"/>
+                    </StackPanel>
+                </Button>
+
+                <Button x:Name="btnReplay"
+                    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+                    Height="85"
+                    Width="95"
+                    Margin="10,0"
+                    HorizontalAlignment="Center"
+                    Click="btnReplay_Click">
+                    <StackPanel>
+                        <SymbolIcon Symbol="Refresh" Margin="0,15,0,15" RenderTransformOrigin="0.5,0.5">
+                            <SymbolIcon.RenderTransform>
+                                <CompositeTransform ScaleX="2.5" ScaleY="2.5"/>
+                            </SymbolIcon.RenderTransform>
+                        </SymbolIcon>
+                        <TextBlock Text="Main ulang"/>
+                    </StackPanel>
+                </Button>
+
+                <Button x:Name="btnShare"
+                    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+                    Height="60"
+                    Width="75"
+                    HorizontalAlignment="Center"
+                    >
+                    <StackPanel>
+                        <SymbolIcon Symbol="ReShare" Margin="0,5,0,0" RenderTransformOrigin="0.5,0.5">
+                            <SymbolIcon.RenderTransform>
+                                <CompositeTransform ScaleX="1.3" ScaleY="1.3"/>
+                            </SymbolIcon.RenderTransform>
+                        </SymbolIcon>
+                        <TextBlock Text="Bagikan"/>
+                    </StackPanel>
+                </Button>
+                <!--<AppBarButton>
+                    <AppBarButton.Icon>
+                        <FontIcon Glyph="&#xE72D;"/>
+                    </AppBarButton.Icon>
+                </AppBarButton>-->
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>
